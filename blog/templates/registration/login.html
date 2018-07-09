@@ -5,6 +5,7 @@
    {% endif %}
    <form method="post" action="{% url 'login' %}">
        {% csrf_token%}
+       <a>Kullanıcı Girişi</a>
        <table>
            <tr>
                <td>{{ form.username.label_tag }}</td>
@@ -15,7 +16,8 @@
                <td>{{ form.password }}</td>
            </tr>
        </table>
-       <input type="submit" value="login" >
+       <input type="submit" value="Giriş" >
+       <p>Henüz kayıtlı değilseniz <a href="/kayit/">buraya tıklayarak kaydolun!</a></p>
        <input type="hidden" name="next" value="{{ next }}" >
    </form>
 {% endblock %}

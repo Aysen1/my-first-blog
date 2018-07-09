@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+   <form action="" method="POST">
+       {% csrf_token %}
+       <h1>Kullanıcı Kaydı</h1>
+       <table border="5">
+           {{ form }}
+       </table>
+       <input type="submit" value="Kaydol">
+   </form>
+{% endblock %}
